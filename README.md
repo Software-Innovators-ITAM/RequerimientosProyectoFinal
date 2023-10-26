@@ -35,6 +35,8 @@ __Desarollada por:__
     - [Interfaces de comunicaciones](#interfaces-de-comunicaciones)
   - [Características del sistema](#características-del-sistema)
     - [Autenticación de usuario](#autenticación-de-usuario)
+    - [Selección de bebidas](#selección-de-bebidas)
+    - [Pedido y Pago](#pedido-y-pago)
   - [Otros requisitos no funcionales](#otros-requisitos-no-funcionales)
     - [Reglas de la plataforma](#reglas-de-la-plataforma)
 - [Apéndice A: Definición de la arquitectura](#apéndice-a-definición-de-la-arquitectura)
@@ -143,31 +145,52 @@ Todos los usuarios deberán proporcionar una cuenta y una contraseña para la ge
 
 1. Descripción y Prioridad
    1. Permitir que los y las alumnas se autentiquen en la aplicación. Prioridad: Alta
-2. Secuencia de Estímulo/Respuesta
-El usuario inicia la aplicación.
-El usuario ingresa su nombre de usuario y contraseña.
-El sistema valida las credenciales.
-El sistema proporciona acceso al usuario o muestra un mensaje de error.
-Requisitos Funcionales
-El sistema debe proporcionar una interfaz para ingresar nombre de usuario y contraseña.
-El sistema debe validar las credenciales contra una base de datos.
-Si las credenciales son incorrectas, el sistema debe mostrar un mensaje de error.
-Si las credenciales son correctas, el sistema debe permitir el acceso a la plataforma principal.
-Selección de bebidas
-Descripción y Prioridad
-Permitir que los usuarios visualicen y seleccionen las bebidas disponibles en la cafetería. Prioridad: Alta
-Secuencia de Estímulo/Respuesta
-El usuario accede al menú de bebidas.
-El usuario visualiza la lista de bebidas disponibles.
-El usuario selecciona una bebida de su elección.
-Requisitos Funcionales
-El sistema debe mostrar todas las bebidas disponibles con sus respectivos precios.
-El sistema debe proporcionar una opción de selección para cada bebida.
+1. Secuencia de Estímulo/Respuesta
+    1. El usuario inicia la aplicación.
+    1. El usuario ingresa su nombre de usuario y contraseña.
+    1. El sistema valida las credenciales.
+    1. El sistema proporciona acceso al usuario o muestra un mensaje de error.
+1. Requisitos Funcionales
+    1. El sistema debe proporcionar una interfaz para ingresar nombre de usuario y contraseña.
+    1. El sistema debe validar las credenciales contra una base de datos.
+    1. Si las credenciales son incorrectas, el sistema debe mostrar un mensaje de error.
+    1. Si las credenciales son correctas, el sistema debe permitir el acceso a la plataforma principal.
+
+### Selección de bebidas
+
+1. Descripción y Prioridad
+    1. Permitir que los usuarios visualicen y seleccionen las bebidas disponibles en la cafetería. Prioridad: Alta
+1. Secuencia de Estímulo/Respuesta
+    1. El usuario accede al menú de bebidas.
+    1. El usuario visualiza la lista de bebidas disponibles.
+    1. El usuario selecciona una bebida de su elección.
+    1. Requisitos Funcionales
+    1. El sistema debe mostrar todas las bebidas disponibles con sus respectivos precios.
+    1. El sistema debe proporcionar una opción de selección para cada bebida.
+1. Requisitos Funcionales
+    1. El sistema debe proporcionar una interfaz para ingresar nombre de usuario y contraseña.
+    1. El sistema debe validar las credenciales contra una base de datos.
+    1. Si las credenciales son incorrectas, el sistema debe mostrar un mensaje de error.
+    1. Si las credenciales son correctas, el sistema debe permitir el acceso a la plataforma principal.
+
+### Pedido y Pago
+
+1. Descripción y Prioridad
+    1. Permitir que los usuarios realicen pedidos de bebidas y procedan al pago. Prioridad: Alta
+1. Secuencia de Estímulo/Respuesta
+    1. El usuario agrega una o más bebidas a su carrito.
+    1. El usuario procede al proceso de pago.
+    1. El usuario elige su método de pago y confirma el pedido.
+    1. El sistema valida el pago y confirma el pedido al usuario.
+1. Requisitos Funcionales
+    1. El sistema debe proporcionar un carrito de compras donde el usuario pueda revisar su pedido antes de pagar.
+    1. El sistema debe proporcionar opciones de métodos de pago (e.g., tarjeta de crédito, pago móvil).
+    1. El sistema debe emitir una confirmación una vez que el pedido haya sido exitosamente realizado.
 
 
 ## Otros requisitos no funcionales
 
-### Reglas de la plataforma 
+### Reglas de la plataforma
 
 1. Únicamente los administradores de la plataforma podrán realizar cambios en las bebidas.
 2. Los administradores podrán gestionar los métodos de pago.

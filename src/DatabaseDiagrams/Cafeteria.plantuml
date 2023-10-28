@@ -1,0 +1,67 @@
+@startuml Cafeteria
+enum UserType {
+    ADMIN: 1
+    REGULAR: 2
+}
+enum IngredientType{
+    MILK: 1
+    FLAVOR: 2
+    SWEETENER: 3
+    BEAN: 4
+}
+enum DrinkType{
+    HOT: 1
+    COLD: 2
+    FREEZE: 3
+}
+enum OrderStatus{
+    IN_PROGRESS: 1
+    READY_TO_PICK_UP: 2
+    COMPLETE: 3
+}
+entity User{
+    id: number <<generated>>
+    jwt_token: string <<generated>>
+    --
+    name: string
+    last_name: string
+    email: string
+    password: string <<encripted>>
+    user_type: UserType
+}
+entity Ingredient{
+    id: number <<generated>>
+    --
+    name: string
+    active: bool
+    ingredient_type: IngredientType
+}
+entity Drink {
+    id: number <<generated>>
+    --
+    name: string
+    price: number
+    description: string
+    ingredients: Ingredient[]
+    drink_type: DrinkType
+    active: bool
+    updated_at: Date
+    created_at: Date
+}
+entity Order{
+    id: number <<generated>>
+    --
+    user: User
+    drinks: Drink[]
+    status: OrderStatus
+    orderPrice: number
+}
+
+User ||--|| UserType
+Ingredient ||--|| IngredientType
+Drink ||--|| DrinkType
+Drink }|--|{ Ingredient
+Order ||--|| OrderStatus
+Order ||--|| User
+Order ||--|{ Drink
+@enduml

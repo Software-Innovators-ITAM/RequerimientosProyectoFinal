@@ -135,6 +135,10 @@ __Capa de datos__: Es la capa que se encarga de la gestión de los datos, es dec
 
 __Para el manejo de datos ocuparemos el software _Postgresql_ debido a su facilidad de implementar en el entorno de desarrollo basado en linux y las ya implementadas librerías de _TypeORM_ en el framework de _NestJS_, el cual también ya se mencionó en la capa anterior__
 
+El diagrama de la base de datos es el sigueinte:
+
+![DataBase Diagram](out/src/DatabaseDiagrams/Cafeteria/Cafeteria.png)
+
 ### Interfaces de comunicaciones
 
 Todos los usuarios deberán proporcionar una cuenta y una contraseña para la generación de su cuenta, a través de la cual podrán hacer la personalización y compra de su café.  No se les pedirá otro dato a los usuarios, a menos que se especifique un cambio posteriormente como un número de celular.
@@ -198,7 +202,7 @@ Todos los usuarios deberán proporcionar una cuenta y una contraseña para la ge
 
 # Apéndice A: Definición de la arquitectura
 
-En este proyecto, se adoptó una estrategia de desarrollo de la arquitectura por capas. La elección de la arquitectura por capas se basó en la experiencia y conocimientos del equipo de desarrollo, así como en la limitación de tiempo disponible para llevar a cabo el proyecto. La arquitectura por capas se seleccionó por su simplicidad de implementación y pruebas, ya que no requería la presencia de un desarrollador senior para su uso efectivo. 
+En este proyecto, se adoptó una estrategia de desarrollo de la arquitectura por capas. La elección de la arquitectura por capas se basó en la experiencia y conocimientos del equipo de desarrollo, así como en la limitación de tiempo disponible para llevar a cabo el proyecto. La arquitectura por capas se seleccionó por su simplicidad de implementación y pruebas, ya que no requería la presencia de un desarrollador senior para su uso efectivo.
 
 # Apéndice B: Metodología de trabajo
 
